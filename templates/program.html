@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Деловая программа</title>
+  </head>
+  <body>
+    <h1>Деловая программа</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Время</th>
+          <th>Событие</th>
+          <th>Место</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for event in program %}
+        <tr>
+          <td>{{ event['time'] }}</td>
+          <td>{{ event['event'] }}</td>
+          <td>{{ event['place'] }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <br>
+    <a href="{{ url_for('download_program') }}" download>Скачать программу в формате PDF</a>
+  </body>
+</html>

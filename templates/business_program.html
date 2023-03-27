@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Деловая программа выставки</h1>
+
+  {% if business_program %}
+    {{ business_program }}
+  {% else %}
+    <p>Деловая программа выставки пока не доступна.</p>
+  {% endif %}
+{% endblock %}
+  {% if business_program %}
+    {{ business_program }}
+    <br>
+    <h2>Таблица деловой программы</h2>
+    {{ business_program_table }}
+  {% else %}
+    <p>Деловая программа выставки пока не доступна.</p>
+  {% endif %}
